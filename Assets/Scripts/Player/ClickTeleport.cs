@@ -3,7 +3,6 @@ using UnityEngine;
 
 /// <summary>
 /// Moves to the clicked position.
-/// 
 /// </summary>
 [DisallowMultipleComponent]
 public class ClickTeleport : NetworkBehaviour
