@@ -19,6 +19,7 @@ public class ClickTeleport : NetworkBehaviour
     {
         m_Target = m_Target == null ? gameObject : m_Target;
         m_Camera = Camera.main;
+        m_Target.transform.position = new Vector3(0, 1, 0);
     }
 
     private void Update()
@@ -28,7 +29,7 @@ public class ClickTeleport : NetworkBehaviour
             var ray = m_Camera.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out var hit))
             {
-                m_Target.transform.position = hit.point;
+                m_Target.transform.position = new Vector3(hit.point.x, 1, hit.point.z);
             }
         }
     }
