@@ -34,7 +34,7 @@ public class CameraHandler : NetworkBehaviour
     // Inspired by https://gist.github.com/KarlRamstedt/407d50725c7b6abeaf43aee802fdd88e
     Vector2 rotation = Vector2.zero;
 
-    void Update() {
+    void LateUpdate() {
         // make first person camera using mouse delta
         if (localPlayer == null) return;
         transform.position = localPlayer.transform.position;
