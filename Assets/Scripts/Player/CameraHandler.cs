@@ -46,6 +46,7 @@ public class CameraHandler : NetworkBehaviour
 		Quaternion yQuat = Quaternion.AngleAxis(rotation.y, Vector3.left);
 
         transform.localRotation = xQuat * yQuat;
+        localPlayer.transform.forward = VectorMath.NormalizeHorizontalProjection(transform.forward);
     }
 
 }
